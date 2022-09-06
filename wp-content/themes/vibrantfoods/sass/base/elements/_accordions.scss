@@ -1,0 +1,56 @@
+/** ACCORDIONS */
+.aGroup{
+    margin-bottom:1.65em;
+}
+
+.aHead {
+    display:flex;
+    align-items: center;
+    gap:20px;
+    cursor: pointer;
+    
+    color:$green;
+    @include font-size(24px);
+    font-weight:500;
+
+    svg{
+        transition: all 0.3s ease-in-out; 
+    }
+}
+
+// .aHead:after {
+//     position: absolute;
+//     content: url('./gfx/circled-arrow.svg');
+//     right: 15px;
+//     transition: transform 0.4s;
+// }
+
+.aBody {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out; 
+    max-height: 0; 
+    height: auto;
+
+    h3{
+        color:$red;
+        font-weight:bold;
+        @include font-size(24px);
+        font-weight:500;
+        margin:1rem 0;
+    }
+}
+
+.aBody > :first-child{
+    margin-top:60px;
+}
+
+.aHead.open {
+    svg{
+        transform: rotate(90deg);
+    }
+    
+}
+
+.aHead.open + .aBody {
+    max-height: 900px; 
+}

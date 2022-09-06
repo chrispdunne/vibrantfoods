@@ -1,0 +1,51 @@
+// .comment-navigation,
+// .posts-navigation,
+// .post-navigation {
+
+// 	.site-main & {
+// 		margin: 0 0 1.5em;
+// 	}
+
+// 	.nav-links {
+// 		display: flex;
+// 	}
+
+// 	.nav-previous {
+// 		flex: 1 0 50%;
+// 	}
+
+// 	.nav-next {
+// 		text-align: end;
+// 		flex: 1 0 50%;
+// 	}
+// }
+
+.brand .post-navigation{
+    .nav-links{
+        display:flex;
+        gap:1.5rem;
+    }
+
+    a{
+        color:$purple;
+        font-weight:700;
+        line-height:1;
+        @include font-size(12px);
+        display: flex;
+        align-items: center;
+        gap:0.5rem;
+    
+        .arrow{
+            width:22px;
+        }
+    
+        &:hover,
+        &:active{
+            color:$blue;
+    
+            .arrow{
+                fill:$blue;
+            }
+        }
+    }
+}

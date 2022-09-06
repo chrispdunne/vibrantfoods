@@ -1,0 +1,90 @@
+// Below not needed hopefully
+.outer-grid-container{
+    overflow:hidden;
+    padding:100px 0;
+}
+
+.outer-grid{
+    display:grid;
+    grid-template-columns: 1fr repeat(14, minmax(0, calc(1158px / 14))) 1fr;
+    gap:20px;
+    padding:0 40px;
+
+    @include tablet{
+        padding:0;
+        // grid-template-columns: 1fr minmax(0, 64rem) 1fr; 
+        // grid-template-columns: 1fr repeat(13, minmax(0, 90px)) 1fr;
+        gap:30px;
+    }
+
+    > div {
+        border:1px solid red;
+    }
+
+    .tText{
+        grid-column: 1 / span 16;
+        @include tablet{
+            grid-column: 4 / span 9;
+            position:relative;
+
+            &:before{
+                content:url(./gfx/bg-our-brands.svg);
+                position:absolute;
+                left:-5rem;
+                top:-100px;
+            }
+        }
+
+        @include desktop{
+            &:before{
+                left:-5rem;
+                top:-100px;
+            }
+        }
+       
+    }
+    
+    .cText{
+        grid-column: 1 / span 16;
+        @include tablet{
+            grid-column: 6 / span 7;
+        }
+        @include max{
+            grid-column: 6 / span 6;
+        }
+    }
+
+    .gContent{
+        grid-column: 1 / span 16;
+        @include tablet{
+            grid-column: 6 / span 10;
+        }
+        @include desktop{
+            grid-column: 6 / span 8;
+        }
+        @include max{
+            grid-column: 6 / span 7;
+        }
+    }
+
+    .gCarousel{
+        grid-column: 1 / span 16;
+        @include tablet{
+            grid-column: 4;
+            grid-column-end:-1;
+        }
+    }
+}
+
+.inner-grid{
+    display:grid;
+    gap:30px;
+}
+
+.temp-carousel{
+    border:1px solid red;
+    width:100%;
+    max-width:65vw;
+    margin:0 0 0 auto;
+    padding-left:40px;
+}

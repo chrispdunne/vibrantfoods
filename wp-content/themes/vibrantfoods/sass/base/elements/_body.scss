@@ -1,0 +1,7 @@
+body {
+	background: $color__background-body; // Fallback for when there is no custom background color defined.
+
+	&:has(.rmp_menu_trigger.is-active){
+		position:fixed;
+	}
+}

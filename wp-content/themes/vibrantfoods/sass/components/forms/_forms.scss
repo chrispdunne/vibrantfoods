@@ -1,0 +1,29 @@
+.wpcf7{    
+    .form-section {
+     margin-bottom:20px;
+
+        @include tablet{
+            margin-bottom:40px;
+        }
+    }
+
+    label{
+        display:inline-block;
+        width:100%;
+        margin-bottom:0.5rem;
+        font-weight:600;
+    }
+
+    input[type="submit"]{
+        text-transform:uppercase;
+        color: $yellow;
+    }
+}
+
+.form-two-col{
+    @include tablet{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:20px; 
+    }
+}

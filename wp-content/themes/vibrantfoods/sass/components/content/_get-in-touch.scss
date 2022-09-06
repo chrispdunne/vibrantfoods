@@ -1,0 +1,54 @@
+.get-in-touch{
+    .parallaxBG{
+        top:-25px;
+        left:-45px;
+    }
+}
+
+.enq-link{
+    font-weight:700;
+
+    a {
+        display:flex;
+        gap:0.5rem;
+        align-items: center;
+        color:$purple;
+    }
+
+    svg{
+        width:30px;
+    }
+}
+
+.map{
+    position:relative;
+    margin-bottom:-5px;
+    
+    iframe#gmap_canvas{
+        height:90vh;
+    }
+
+    .title-panel-container{
+        position:absolute;
+        inset:0;
+        margin-bottom:100px;
+    }
+
+    .inner-wrapper{
+        display:flex;
+        justify-content: flex-end;
+    }
+
+    .title-panel{
+        margin-top:-50px;
+    }
+
+    h2 {
+        max-width:6ch;
+        margin-bottom:1rem;
+    }
+
+    address {
+        margin-bottom:0;
+    }
+}

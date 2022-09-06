@@ -1,0 +1,89 @@
+/*
+Custom reset compiled from
+Josh Comeau (jc) - https://www.joshwcomeau.com/css/custom-css-reset/
+Elad Shechter (es) - https://elad2412.github.io/the-new-css-reset/
+Andy Bell (ab) - https://piccalil.li/blog/a-modern-css-reset/
+Thanks guys!
+*/
+
+/* Remove default margin (jc) */
+* {
+    margin: 0;
+}
+
+/* Allow percentage-based heights in the application (jc) */
+html, body {
+    height: 100%;
+}
+
+/* smooth scroll for internal anchors (ab) */
+// html:focus-within {
+//     scroll-behavior: smooth;
+// }
+
+html { 
+    scroll-behavior: smooth
+  }
+
+/* Aaccessible line-height, Improve text rendering (jc) */
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults (jc) */
+img, picture, video, canvas, svg {
+    display: block;
+}
+
+/* Remove built-in form typography styles (jc) */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Avoid text overflows (jc) */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Re-apply the pointer cursor for anchor tags (es) */
+a, button {
+    cursor: revert;
+}
+
+/* removes spacing between cells in tables (es) */
+table {
+    border-collapse: collapse;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them (ab) */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* CHECK THESE */
+/* revert the 'white-space' property for textarea elements on Safari (es) */
+textarea {
+    white-space: revert;
+}
+
+/* reset default text opacity of input placeholder (es) */
+::placeholder {
+    color: unset;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed (ab) */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}

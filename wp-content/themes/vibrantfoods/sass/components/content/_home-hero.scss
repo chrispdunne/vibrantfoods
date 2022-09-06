@@ -1,0 +1,74 @@
+#home-hero{
+    padding:0;
+    overflow:hidden;
+
+    .hero-image-container{
+
+
+        .hero-image {
+            margin:6rem -2rem 0 auto;
+
+            @include smallmobile{
+                margin:2rem -5rem 0 auto
+            }
+            @include mobile{
+                margin:1rem -5rem 0 auto;
+            }
+            @include tablet{
+                margin:-10rem -10rem 0 auto;
+
+            }
+            // @include desktop{
+            //     margin:-10rem -10rem 0 auto;
+            // }
+        }
+
+    }   
+
+
+    .hero-content{
+        position:absolute;
+        inset:0;
+
+        .img__copy{
+            margin-top:20px;
+            
+            @include tablet{
+                margin-top:50px;
+            }
+        }
+    }
+
+
+    // background-position: 0% -140px;
+    // background-position: 15% 23%;
+    // // background-size:cover;
+    // margin-top:-50px;
+    // padding-top:100px;
+    // padding-bottom:20%;
+    // background-size:100vw;
+    
+    // .wrapper{
+    //     padding-left:190px;
+    // }
+    @include max(){
+        // background-position: right 23%;
+    }
+
+    h1 {
+        max-width:8ch;
+    }
+    .standfirst{
+        max-width:14ch;
+        margin-bottom:10rem;
+
+        @include smallmobile{
+            max-width:22ch;
+            margin-bottom:8rem;
+        }
+
+        @include tablet{
+            margin-bottom:7rem;
+        }
+    }
+}

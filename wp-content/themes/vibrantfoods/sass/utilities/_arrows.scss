@@ -1,0 +1,19 @@
+.arrow-black{
+    fill:black;
+}
+
+.arrow-green{
+    fill:$green;
+}
+
+.arrow-purple{
+    fill:$purple;
+}
+
+.arrow-down{
+    transform: rotate(90deg);
+}
+
+.arrow-left{
+    transform:rotate(180deg);
+}

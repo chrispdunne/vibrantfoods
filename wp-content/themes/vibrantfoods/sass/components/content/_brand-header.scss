@@ -1,0 +1,16 @@
+.brand-header{
+    margin-bottom:60px;
+
+    .inner-wrapper{
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap:wrap;
+        gap:30px;
+    }
+
+    h1 {
+        margin-bottom:0;
+    }
+}
+

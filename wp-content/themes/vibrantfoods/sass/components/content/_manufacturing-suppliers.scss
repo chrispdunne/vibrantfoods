@@ -1,0 +1,34 @@
+.manufacturing-suppliers{
+    .copy-and-image{
+        margin-bottom:50px;
+
+        @include tablet{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        .mf-suppliers-copy{
+            @include tablet{
+                padding-right:90px;
+                
+                .parallaxBG{
+                    top:215px;
+                    left:-182px;
+                }
+            }
+        }
+    
+        .mf-suppliers-image{
+            margin-top:-120px;
+    
+            @include tabletDown{
+                display:none;
+            }
+        }
+    }
+
+    lite-youtube{
+        margin-bottom:-100px;
+        z-index:100;
+    }
+}

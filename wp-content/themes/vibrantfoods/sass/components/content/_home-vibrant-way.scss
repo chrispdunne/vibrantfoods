@@ -1,0 +1,30 @@
+#vibrant-way{
+    
+    .parallaxContent span {
+        color:$green;
+    }
+
+    .subheading{
+        @include font-size(36px);
+        margin-bottom:70px;
+
+        span{
+            font-weight:800;
+        }
+    }
+
+    
+    .parallaxBG{    
+        top:55px;
+    }
+}
+
+#vibrant-way-accordions{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:50px;
+
+    @include mobile{
+        grid-template-columns: 1fr 1fr;
+    }
+}

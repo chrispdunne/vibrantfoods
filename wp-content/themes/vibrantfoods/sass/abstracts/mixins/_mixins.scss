@@ -1,0 +1,25 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+// @include font-size(24px);
+// https://joecianflone.co/article/sass-px-to-rems
+$base: 100%;
+@function get-value($n) {
+   @return $n / ($n * 0 + 1);
+}
+@mixin font-size($font-size) {
+   $base-size: get-value($base / 100);
+   $base-px-size: 16 * $base-size;
+
+   font-size: $font-size;
+   font-size: (get-value($font-size) / $base-px-size) + rem;
+}

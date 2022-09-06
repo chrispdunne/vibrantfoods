@@ -1,0 +1,29 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0 none;
+	background: $color__background-button;
+	color: $color__text-button;
+	line-height: 1;
+	padding: 0.6em 1em;
+	font-weight:700;
+	cursor:pointer;
+
+	&:hover {
+		color: $color__text-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		color: $color__text-button-active;
+	}
+
+	// &.slick-arrow{
+
+	// 	svg{
+	// 		width:30px;
+	// 		height:30px;
+	// 	}
+	// }
+}

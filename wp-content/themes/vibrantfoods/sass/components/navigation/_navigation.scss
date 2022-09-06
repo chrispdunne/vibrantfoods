@@ -1,0 +1,137 @@
+.main-navigation {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	@include font-size(20px);
+	font-weight:700;
+
+	ul {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		gap:30px;
+
+		ul {
+			// float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+					
+				}
+			}
+
+			a {
+				width: 250px;
+				padding:0 30px;
+				@include font-size(17px);
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			// left: auto;
+			left:-30px
+		}
+	}
+
+	.sub-menu{
+		flex-direction:column;
+		@include font-size(18px);
+		background-color:white;
+		gap:20px;
+		padding-top:20px;
+		padding-bottom:25px;
+		box-shadow: 0 8px 6px 2px rgba(0,0,0,0.05);
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+
+		&.menu-item-has-children{
+			padding-right:20px;
+
+			&:after{
+				content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 8'%3E%3Cpath fill='%23E3261F' d='m11.12 1.583-4.517 5.68c-.429.519-1.09.519-1.5 0L.585 1.582C.156 1.046.37.633 1.03.633h9.643c.679 0 .875.413.446.95Z'/%3E%3C/svg%3E");
+				width:11px;
+				height:7px;
+				display:inline-block;
+				position:absolute;
+				right:0;
+				top:-2px;
+			}
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		color:$red;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+// .menu-toggle,
+// .main-navigation.toggled ul {
+// 	display: block;
+// }
+
+// @media screen and (min-width: 37.5em) {
+
+// 	.menu-toggle {
+// 		display: none;
+// 	}
+
+// 	.main-navigation ul {
+// 		display: flex;
+// 	}
+// }
+
+// Responsive menu overrides
+#rmp_menu_trigger-159{
+	right:30px;
+}
+
+#rmp-menu-wrap-159 .rmp-menu-item{
+	margin-bottom: 15px;
+}
+
+#rmp-menu-wrap-159 .rmp-submenu{
+	padding-top:15px;
+}
+
+#rmp-menu-wrap-159 .rmp-submenu .rmp-menu-item-link{
+	height:auto;
+	line-height:1.3;
+}

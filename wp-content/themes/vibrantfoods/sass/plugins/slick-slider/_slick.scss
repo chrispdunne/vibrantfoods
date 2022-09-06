@@ -1,0 +1,115 @@
+// brands and products
+.grid-for-carousel{
+    display:grid;
+    grid-template-columns: 40px 1fr 1fr;
+
+    @include tablet{
+        grid-template-columns: minmax(17rem, 1fr) minmax(0, 39rem) 1fr;
+    }
+
+    &.__products{
+        @include tablet{
+            grid-template-columns:minmax(10.75rem,1fr) minmax(0,51rem) 1fr;
+        }
+    }
+}
+
+.brands-carousel-nav{
+    margin-bottom:30px;
+    padding-left:20px;
+}
+
+.products-carousel-nav{
+    margin-top:30px;
+    padding-left:20px;
+}
+
+.mission-carousel-nav{
+    margin-top:calc(80px - 1.5em);
+}
+
+.carousel{
+    visibility: hidden;
+
+    &.slick-initialized {
+        visibility: visible;
+    }
+}
+
+.carousel-container,
+.carousel-nav{
+
+    &.__to-edge{
+        max-width: 100%;
+    
+        grid-column: 2;
+        grid-column-end:-1;
+    
+        .slick-slide{
+            padding-left:20px;
+            padding-right:20px;
+        }
+        
+        .slick-list{padding:0 20% 0 0;}
+    }
+}
+
+// products
+.product-slide{
+    span{
+        @include font-size(36px);
+        display:inline-block;
+        color:white;
+        font-weight:900;
+        margin-top:10px;
+        transition:all 0.2s ease-in-out;
+    }
+
+    &:hover{
+        span{
+            color:$yellow;
+        }
+    }
+}
+
+// next/prev button
+.slick-prev,
+.slick-next{
+    width:35px;
+    height:35px;
+    position:relative;
+    padding:0;
+}
+
+// button style
+.brands-carousel-nav,
+.mission-carousel-nav{
+    .slick-prev,
+    .slick-next{
+    
+        &:before{
+            content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 36 35'%3E%3Cpath fill='%234A2670' d='M35.438 17.445C35.438 7.812 27.633.007 18 .007S.562 7.812.562 17.445c0 9.632 7.805 17.437 17.438 17.437s17.438-7.805 17.438-17.437Zm-31.5 0C3.938 9.71 10.194 3.382 18 3.382c7.734 0 14.063 6.328 14.063 14.063 0 7.804-6.329 14.062-14.063 14.062A14.014 14.014 0 0 1 3.937 17.445ZM9 18.85c0 .492.352.844.844.844H18v4.71c0 .774.844 1.196 1.406.633l6.961-6.96c.352-.352.352-.844 0-1.196l-6.96-6.96a.812.812 0 0 0-1.407.562v4.71H9.844a.855.855 0 0 0-.844.844v2.813Z'/%3E%3C/svg%3E");
+        }
+    }
+}
+
+// button style
+.products-carousel-nav{
+    .slick-prev,
+    .slick-next{
+        background:transparent;
+
+        &:before{
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 36 35'%3E%3Cpath fill='%23fff' d='M35.438 17.445C35.438 7.812 27.633.007 18 .007S.562 7.812.562 17.445c0 9.632 7.805 17.437 17.438 17.437s17.438-7.805 17.438-17.437Zm-31.5 0C3.938 9.71 10.194 3.382 18 3.382c7.734 0 14.063 6.328 14.063 14.063 0 7.804-6.329 14.062-14.063 14.062A14.014 14.014 0 0 1 3.937 17.445ZM9 18.85c0 .492.352.844.844.844H18v4.71c0 .774.844 1.196 1.406.633l6.961-6.96c.352-.352.352-.844 0-1.196l-6.96-6.96a.812.812 0 0 0-1.407.562v4.71H9.844a.855.855 0 0 0-.844.844v2.813Z'/%3E%3C/svg%3E");
+        }
+    }
+}
+
+// button position
+.slick-next{
+    margin-left: 10px;
+}
+
+.slick-prev{
+    transform: scaleX(-1);
+}

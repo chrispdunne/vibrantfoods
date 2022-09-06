@@ -1,0 +1,45 @@
+.content-indent{
+    @include tablet{
+        padding-left:190px;
+    }
+}
+
+.copy-indent{
+    @include tablet{
+        margin-left: 100px;
+    }
+}
+
+.has-parallax{
+    @include tablet{
+        padding-left:190px;
+    }
+    
+} 
+
+.title-panel{    
+    padding:30px 50px;
+    display:inline-block;
+    max-width:100%;
+    
+    h2 {
+        margin-bottom:2rem;
+        display:inline-block;
+    }
+
+    p:last-of-type {
+        margin-bottom:0;
+    }
+}
+
+.spacer{
+    height:50px;
+
+    @include tablet{
+        height:100px;
+    }
+
+    &.__shallow{
+        height:30px;
+    }
+}

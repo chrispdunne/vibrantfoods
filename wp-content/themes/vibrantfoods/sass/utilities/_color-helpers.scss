@@ -1,0 +1,30 @@
+.bg-red,
+.bg-purple,
+.bg-yellow,
+.bg-blue,
+.bg-pink,
+.bg-img-dark{
+    color:white;
+}
+
+.bg-red{ background-color:$red; }
+
+.bg-purple{ background-color:$purple; }
+
+.bg-yellow{ background-color:$yellow; }
+
+.bg-blue{ background-color:$blue; }
+
+.bg-pink{ background-color:$pink; }
+
+.bg-grey-gradient{ background: linear-gradient(0deg, #F6F6F6, #F6F6F6), #D9D9D9; }
+
+.bg-white{
+    .parallaxBG{
+        color:$purple;
+    }
+}
+
+.pink{ color:$pink; }
+
+.purple{ color:$purple; }
