@@ -10,15 +10,15 @@
 
 .inner-wrapper{
     width:100%;
-	max-width:1158px;
+	max-width:var(--inner-width);
 	margin: 0 auto;
-    padding-left:40px;
-    padding-right:40px;
+    padding-left:var(--gutter-padding);
+    padding-right:var(--gutter-padding);
     position:relative;
 
     &.__narrow{
         @include tablet{
-            max-width:1078px;
+            max-width:var(--inner-width-narrow);
         }
     }
 }
