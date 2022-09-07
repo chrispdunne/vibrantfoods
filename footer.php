@@ -66,7 +66,7 @@
 			<div class="colophon footer-menu">
 				<p><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'vibrantfoods' ) ); ?>">&copy; Vibrant Foods Limited <?= date("Y"); ?></a></p>
 
-				<?php if ( isACF() && get_field('company_reg', 'options') ) echo '<p>Registered company number' . get_field('company_reg', 'options').'</p>'; ?>
+				<?php if ( isACF() && get_field('company_reg', 'options') ) echo '<p>Registered company number ' . get_field('company_reg', 'options').'</p>'; ?>
 			</div>
 		</div><!-- .site-info -->
 

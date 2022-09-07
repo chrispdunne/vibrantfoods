@@ -22,24 +22,27 @@ endif;
 
         <div class="inner-wrapper">
             <h1 class="uppercaser">Our<br>Brands</h1>
-            
             <?php
-            the_post_navigation(
-				array(
-					// 'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'vibrantfoods' ) . '</span> <span class="nav-title">%title</span>',
-                    'prev_text' => '<img class="style-svg arrow arrow-purple arrow-left" src="'.get_template_directory_uri().'/gfx/circled-arrow.svg" /> PREVIOUS BRAND',
-					// 'next_text' => '%title <img class="style-svg arrow arrow-purple" src="'.get_template_directory_uri().'/gfx/circled-arrow.svg" />',
-                    'next_text' => 'NEXT BRAND <img class="style-svg arrow arrow-purple" src="'.get_template_directory_uri().'/gfx/circled-arrow.svg" />',
-				)
-			);
+                $brands = get_posts( ['post_type' => 'brand', 'numberpostsint' => 9] );
+                if ( $brands && !is_wp_error( $brands ) ) {
+                    echo '<div class="brand-logo-links"><a href="">';
+                    foreach ( $brands as $brand ) {
+                        echo '<a href="' . get_permalink( $brand->ID ) . '">';
+                        echo '<img class="brand-logo-link" src="';
+                        echo wp_get_attachment_image_src( get_field( 'brand_logo', $brand->ID ), 'medium' )[0];
+                        echo '" />';
+                        echo '</a>';
+
+                    }
+                    echo '</div>';
+                }
             ?>
-            <!-- <a class="brand-nav" href="#">NEXT BRAND <img class="style-svg arrow arrow-purple" src="<?= get_template_directory_uri(); ?>/gfx/circled-arrow.svg" /></a> -->
-        </div>
+         </div>
 	</header>
     
     <section class="bgImg-title-panel brand-hero" <?php if ( $featuredImgUrl ) echo 'style="background-image:url('.$featuredImgUrl.')"'; ?>>
         <div class="inner-wrapper">
-            <div class="title-panel bg-blue">
+            <div class="title-panel bg-blue" <?php if ( get_field( 'brand_color' ) ) { echo 'style="background-color: ' . get_field( 'brand_color' ) . '"'; }?>>
                 <h2 class="uppercase"><?= get_the_title(); ?></h2>
                 <?= $sub; ?>
             </div>
