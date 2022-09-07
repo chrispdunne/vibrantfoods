@@ -1,6 +1,6 @@
 .wrapper{
 	width:100%;
-	padding: 0 40px;
+	padding: 0 var(--gutter-padding);
 	margin: 0 auto;
 
     &.no-padding{
