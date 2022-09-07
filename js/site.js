@@ -84,6 +84,7 @@ function missionCarousel(){
 function productsCarousel(){
 
   jQuery('.products-carousel').slick({
+      autoplay: true,
       mobileFirst: true,
       slidesToShow: 1,
       slidesToScroll: 1,

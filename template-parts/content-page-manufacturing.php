@@ -189,14 +189,11 @@
     $safetyTitle = get_field('manufacturing_safety_title') ?: null;
     $safetyCopy = get_field('manufacturing_safety_copy') ?: null;
     $safetyImg = get_field('manufacturing_safety_image') ?: null;
-    $safetyParallaxBG = str_replace(' ', '<br>', $safetyTitle );
-
+ 
     echo '<section class="bg-parallax bg-white manufacturing-safety">';
 
         echo '<div class="inner-wrapper entry-content">';
-        
-            echo '<div class="parallaxBG">'.$safetyParallaxBG.'</div>';
-
+ 
             echo '<div class="parallaxContent">';
                 echo '<h3 class="purple">'.$safetyTitle.'</h3>';
                 echo '<div class="copy-indent">';

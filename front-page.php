@@ -211,17 +211,13 @@ get_header();
             // Our Mission
             $missionHeading = get_field('mission_heading') ?: null;
             $missionSub = get_field('mission_sub') ?: null;
-            $paralaxBG = str_replace(' ', '<br>', $missionHeading );
-
+ 
             if ( $missionHeading && $missionSub ) :
                 ?>
                 <section id="our-mission" class="tab-title-below">
                     
                     <div class="bg bg-parallax bg-purple">
-                        <div class="inner-wrapper content-indent">
-                            
-                            <div class="parallaxBG"><?= $paralaxBG; ?></div>
-
+                        <div class="inner-wrapper content-indent">                        
                             <div class="parallaxContent">
                                 <h2><?= $missionHeading; ?></h2>
                                 <p class="standfirst copy-indent"><?= $missionSub; ?></p>
@@ -341,14 +337,12 @@ get_header();
             // Our Products
             $productsHeading = get_field('products_heading') ?: null;
             $productsSub = get_field('products_sub') ?: null;
-            $paralaxBG = str_replace(' ', '<br>', $productsHeading );
             $productsPage = get_field('products_products_page') ?: null;
 
             if ( $productsHeading && $productsSub && $productsPage ) :
                 ?>
                 <section id="our-products" class="bg bg-parallax bg-purple">
                     <div class="inner-wrapper content-indent">
-                        <div class="parallaxBG"><?= $paralaxBG; ?></div>
                         <div class="parallaxContent">
                             <h2><?= $productsHeading; ?></h2>
                             <p class="standfirst"><?= $productsSub; ?></p>
