@@ -42,49 +42,57 @@
         ?>
     </section>
 
-    <section class="sus-targets">
+    <section class="sus-targets inner-wrapper">
         <?php
         $susTargetsTitle = get_field('sus_targets_title') ?: null;
         $susTargetsSubTitle = get_field('sus_targets_subtitle') ?: null;
-        
-        if ( $susTargetsTitle && $susTargetsSubTitle):
-            echo $susTargetsTitle;
-            echo $susTargetsSubTitle;
-        endif;
 
-        if ( have_rows('sus_targets') ):
-            $targetsArr = array();
-        
-            while ( have_rows('sus_targets') ):
-                the_row();
-
-                echo '<div>';
-                    echo wp_get_attachment_image( get_sub_field('target_img'), 'full', false);
-                    the_sub_field('target_title');
-                    the_sub_field('target_copy');
-                echo '</div>';
-                
-             endwhile;
-        endif;
-
-        $susImpactImg = get_field('sus_impact_img') ?: null;
-        $susImpactTitle = get_field('sus_impact_title') ?: null;
-        $susImpactCopy = get_field('sus_impact_copy') ?: null;
-        $susImpactDownloadTitle = get_field('sus_impact_download_title') ?: null;
-        $susImpactDownloadFile = get_field('sus_impact_download_file') ?: null;
-
-        if ( $susImpactImg && $susImpactTitle && $susImpactCopy ):
-            echo wp_get_attachment_image( $susImpactImg, 'full', false);
-            echo $susImpactTitle;
-            echo $susImpactCopy;
-
-            if ( $susImpactDownloadTitle && $susImpactDownloadFile ):
-                echo $susImpactDownloadTitle;
-                echo $susImpactDownloadFile;
+        echo '<div class="sus-targets-row">';  
+            // Heading
+            if ( $susTargetsTitle && $susTargetsSubTitle):
+                echo '<h2>'.$susTargetsTitle.'<span>'.$susTargetsSubTitle.'</span></h2>';
             endif;
 
-        endif;
+            // Targets
+            if ( have_rows('sus_targets') ):
+                $targetsArr = array();
+            
+                while ( have_rows('sus_targets') ):
+                    the_row();
 
+                        echo wp_get_attachment_image( get_sub_field('target_img'), 'full', false);
+
+                        echo '<div class="targets-row-copy">';
+                            echo '<h3>'.get_sub_field('target_title').'</h3>';
+                            the_sub_field('target_copy');
+                        echo '</div>';
+                    
+                endwhile;
+            endif;
+
+            // Impact report
+            $susImpactImg = get_field('sus_impact_img') ?: null;
+            $susImpactTitle = get_field('sus_impact_title') ?: null;
+            $susImpactCopy = get_field('sus_impact_copy') ?: null;
+            $susImpactDownloadTitle = get_field('sus_impact_download_title') ?: null;
+            $susImpactDownloadFile = get_field('sus_impact_download_file') ?: null;
+
+            if ( $susImpactImg && $susImpactTitle && $susImpactCopy ):
+                
+                echo wp_get_attachment_image( $susImpactImg, 'full', false);
+
+                echo '<div class="targets-row-copy impact-report">';
+                    echo '<h2>'.$susImpactTitle.'</h2>';
+                    echo $susImpactCopy;
+
+                    if ( $susImpactDownloadTitle && $susImpactDownloadFile ):
+                        echo '<p class="no-bottom-margin">'.$susImpactDownloadTitle.'</p>';
+                        echo '<a href="'.$susImpactDownloadFile.'">Download now</a>';
+                    endif;
+                echo '</div>';
+                
+            endif;
+        echo '</div>'; // .sus-targets-row
         ?>
     </section>
 

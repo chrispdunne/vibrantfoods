@@ -4,7 +4,10 @@
     --section-padding-top:80px;
     --section-padding-bottom:50px;
     --gutter-padding:40px;
-    --margin-large:50px;
-    --margin-large--:calc(var(--margin-large) * -1);
+    
     --margin-small:30px;
+    --margin-large:50px;
+    --margin-extra-large: 100px;
+
+    --margin-minus-large:calc(var(--margin-large) * -1);
 }
