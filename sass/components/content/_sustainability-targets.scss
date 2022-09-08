@@ -88,7 +88,7 @@
     }
 
     h2{
-        font-size:clamp(2.25rem, 2.036rem + 1.07vw, 3rem); // 36/48
+        font-size:calc(max(2.25rem, 2.036rem + 1.07vw, 3rem)); // 36/48
         margin-bottom:var(--margin-small);
 
         span{
@@ -103,7 +103,7 @@
     }
 
     h3 {
-        font-size:clamp(2.25rem, 2.036rem + 1.07vw, 3rem); // 36/48
+        font-size:calc(max(2.25rem, 2.036rem + 1.07vw, 3rem)); // 36/48
         margin-bottom:1.5rem;
     }
 
