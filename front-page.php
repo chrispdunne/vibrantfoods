@@ -38,11 +38,13 @@ get_header();
                 </header> -->
 
                 <header id="home-hero" class="bg">
-
                     <div class="hero-image-container">
                         <?php echo wp_get_attachment_image( $heroImg, 'full', false, ["class" => "hero-image"]); ?>
                     </div>
-
+                    <div class="hero-video-container">
+                        <video muted loop autoplay src="<?php echo get_field( 'video' )['url'] ?>" >
+                        </video>
+                    </div>
                     <div class="hero-content">
                         <div class="inner-wrapper content-indent">
                         <div class="img__copy entry-content">
@@ -65,32 +67,19 @@ get_header();
 
             if ( $purposeHeading && $purposeCopy && $purposeImg ) :
                 ?>
-                <!-- <section id="our-purpose" class="bg">
-                    <div class="img-left__img">
-                        <?php echo wp_get_attachment_image( $purposeImg, 'full', false); ?>
-                    </div>
-
-                    <div class="inner-wrapper img-left__copy">
-                        <div class="img__copy entry-content">
-                            <h2><?= $purposeHeading; ?></h2>
-                            <p class="standfirst"><?= $purposeCopy; ?></p>
-                        </div>
-                    </div>
-
-                </section> -->
-
                 <section id="our-purpose">
-                    <div class="purpose-img">
-                        <?php echo wp_get_attachment_image( $purposeImg, 'full', false); ?>
-                    </div>
+                    <div class="our-purpose__inner max-width">
+                        <div class="purpose-img">
+                            <?php echo wp_get_attachment_image( $purposeImg, 'full', false); ?>
+                        </div>
 
-                    <div class="purpose-copy">
-                        <div class="entry-content">
-                            <h2><?= $purposeHeading; ?></h2>
-                            <p class="standfirst"><?= $purposeCopy; ?></p>
+                        <div class="purpose-copy">
+                            <div class="entry-content">
+                                <h2><?= $purposeHeading; ?></h2>
+                                <p class="standfirst"><?= $purposeCopy; ?></p>
+                            </div>
                         </div>
                     </div>
-
                 </section>
 
                 <?php
@@ -101,7 +90,9 @@ get_header();
             $vibrantHeading = get_field('vibrant_heading') ?: null;
             $vibrantSub = get_field('vibrant_sub') ?: null;
             $vibrantAccordions = have_rows('vibrant_accordions') ?: null; 
-            $vibrantParallaxBG = str_replace(' ', '<br>', $vibrantHeading );
+            $vibrantParallaxBG = preg_replace('/ /', '<br>', $vibrantHeading, 1);
+    
+
 
             if ( $vibrantHeading && $vibrantSub && $vibrantAccordions ) :
                 ?>

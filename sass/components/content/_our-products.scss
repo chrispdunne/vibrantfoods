@@ -6,7 +6,7 @@
             max-width:10ch;
         }
         strong{
-            font-size:clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem); // 20/24
+            font-size:calc(max(1.25rem, 1.179rem + 0.36vw, 1.5rem)); // 20/24
         }
     }
 }
@@ -20,7 +20,7 @@
     }
 
     a {
-        font-size:clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+        font-size:calc(max(1.25rem, 1.179rem + 0.36vw, 1.5rem));
         color:$purple;
         font-weight:700;
         display:inline-flex;

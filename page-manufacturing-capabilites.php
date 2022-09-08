@@ -157,7 +157,7 @@ the_post();
 					
 					echo '<div class="copy-image__copy entry-content">';
 
-						echo '<div class="parallaxBG">'.$techTitle.'</div>';
+						// echo '<div class="parallaxBG">'.$techTitle.'</div>';
 
 						echo '<h3 class="uppercase">'.$techTitle.'</h3>';
 						echo $techCopy;
