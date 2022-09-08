@@ -40,6 +40,6 @@ add_action( 'wp_enqueue_scripts', 'vibrantfoods_scripts' );
 function vibrantfoods_google_fonts() { ?>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <?php }
 add_action( 'wp_head', 'vibrantfoods_google_fonts' );
