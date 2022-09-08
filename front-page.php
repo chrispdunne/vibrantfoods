@@ -28,15 +28,6 @@ get_header();
 
             if ( $strap && $heroImg ) :
                 ?>
-                <!-- <header class="home-hero bg-image" style="background-image:url(<?= $heroImg; ?>)">
-                    <div class="inner-wrapper content-indent">
-                        
-                        <?php the_title('<h1 class="uppercase">', '</h1>'); ?>
-                        <p class="standfirst"><?= $strap; ?></p>
-                        <a href="#our-purpose"><img class="style-svg arrow-down arrow-black" src="<?= get_template_directory_uri(); ?>/gfx/circled-arrow.svg" /><span class="screen-reader-text">Jump to Our Purposes</span></a>
-                    </div>
-                </header> -->
-
                 <header id="home-hero" class="bg">
                     <div class="hero-image-container">
                         <?php echo wp_get_attachment_image( $heroImg, 'full', false, ["class" => "hero-image"]); ?>
@@ -289,24 +280,6 @@ get_header();
 
 
             // Our Vision
-            $visionHeading = get_field('vision_heading') ?: null;
-            $visionSub = get_field('vision_sub') ?: null;
-            $visionImg = get_field('vision_image') ?: null;
-            
-            if ( $visionHeading && $visionSub && $visionImg ) :
-                ?>
-                <!-- <section class="img-text-panel ">
-                    <?= wp_get_attachment_image( $visionImg, 'full' ); ?>
-                    <div class="inner-wrapper">
-                        <div class="title-panel bg-purple">
-                            <h2><?= $visionHeading; ?></h2>
-                            <p><?= $visionSub; ?></p>
-                        </div>
-                    </div>
-                </section> -->
-                <?php
-            endif;
-
             $visionHeading = get_field('vision_heading') ?: null;
             $visionSub = get_field('vision_sub') ?: null;
             $visionImg = get_field('vision_image') ?: null;

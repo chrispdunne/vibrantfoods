@@ -1,0 +1,58 @@
+{
+    "key": "group_6319c7da5e9e3",
+    "title": "Contact form",
+    "fields": [
+        {
+            "key": "field_6319c7e71d3c4",
+            "label": "Contact form shortcode",
+            "name": "contact_form",
+            "type": "text",
+            "instructions": "Copy and paste the shortcode from the <a href=\".\/admin.php?page=wpcf7\">Contact Form menu<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-partnerships-suppliers.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-contact.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-sign-up.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1662652280
+}

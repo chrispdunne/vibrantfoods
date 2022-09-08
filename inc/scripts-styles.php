@@ -2,7 +2,7 @@
 // Version, updated by gulp task
 if ( ! defined( '_S_VERSION' ) ) {
     // Replace the version number of the theme on each release.
-    define( '_S_VERSION', 'vt1662633496819' );
+    define( '_S_VERSION', 'vt1662651860944' );
 }
 
 /**
