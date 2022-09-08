@@ -33,13 +33,17 @@
 }
 
 .spacer{
-    height:50px;
+    height:var(--margin-large);
 
     @include tablet{
-        height:100px;
+        height:var(--margin-extra-large);
     }
 
     &.__shallow{
-        height:30px;
+        height:var(--margin-small);
     }
+}
+
+.no-bottom-margin{
+    margin-bottom:0;
 }
