@@ -1,0 +1,14 @@
+.sign-up-header{
+   margin:80px 0;
+
+    .inner-wrapper{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    h1,p{
+        margin-bottom:0;
+    }
+}

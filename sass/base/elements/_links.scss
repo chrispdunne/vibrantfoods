@@ -20,4 +20,37 @@ a {
 	&:active {
 		outline: 0;
 	}
+
+	&.purple{
+		color: $purple;
+		font-weight:700;
+
+		&:visited {
+			color: $purple;
+		}
+	
+		&:hover,
+		&:focus,
+		&:active {
+			color: lighten($purple, 10%);
+
+			.arrow-purple{
+				fill:lighten($purple, 10%);
+			}
+		}
+	
+		&:focus {
+			outline: thin dotted;
+		}
+	}
+}
+
+.link-with-arrow{
+	display:inline-flex;
+	gap:10px;
+	align-items: center;
+
+	svg{
+		width:30px;
+	}
 }

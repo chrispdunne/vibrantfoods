@@ -24,8 +24,9 @@
     opacity:0.1;
     position:absolute;
     left:-30px;
-    // transform:rotate(90deg);
-
+    transform:rotate(90deg);
+    pointer-events:none;
+    
     @include tabletDown{
         display:none;
     }
@@ -249,4 +250,11 @@
     }
 }
 
-// grid-area row-start / column-start / row-end / column-end
+.two-col-grid{
+    
+    @include tablet{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:75px;
+    }
+}

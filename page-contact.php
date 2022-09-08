@@ -35,9 +35,21 @@ $newsTitle = get_field('news_title') ?: null;
 				<?php
 				the_title( '<h1 class="uppercase">', '</h1>' ); 
 				
-				if ( $newsTitle && $newsLink ) echo '<p class="enq-link"><a href="'.$newsLink.'">'.$newsTitle.'<img class="style-svg arrow-purple" src="'.get_template_directory_uri().'/gfx/circled-arrow.svg" /></a></p>';
+				$signUpTitle = get_field('signup_link_page_link_title') ?: null;
+				$signUpLink = get_field('signup_link_page_link') ?: null;
+
+				$pressPageTitle = get_field('press_link_page_link_title') ?: null;
+				$pressPageLink = get_field('press_link_page_link') ?: null;
+
+				if ( $signUpTitle && $pressPageLink ) 
+					echo '<p>
+							<a class="link-with-arrow purple" href="'.$signUpLink.'">'.$signUpTitle.'<img class="style-svg arrow-purple" src="'.get_template_directory_uri().'/gfx/circled-arrow.svg" /></a>
+						</p>';
 	
-				if ( $pressTitle && $pressLink ) echo '<p class="enq-link"><a href="'.$pressLink.'">'.$pressTitle.'<img class="style-svg arrow-purple" src="'.get_template_directory_uri().'/gfx/circled-arrow.svg" /></a></p>';
+				if ( $pressPageTitle && $pressPageLink ) 
+					echo '<p>
+							<a class="link-with-arrow purple" href="'.$pressPageLink.'">'.$pressPageTitle.'<img class="style-svg arrow-purple" src="'.get_template_directory_uri().'/gfx/circled-arrow.svg" /></a>
+						</p>';
 				?>
 	
 			</div>
@@ -46,7 +58,7 @@ $newsTitle = get_field('news_title') ?: null;
 	
 			<div class="inner-wrapper __narrow">
 				
-				<?= do_shortcode('[contact-form-7 id="249" title="Get in Touch"]'); ?>
+				<?php get_template_part( 'template-parts/partial', 'contact-form' ); ?>
 	
 			</div>
 		</header>
