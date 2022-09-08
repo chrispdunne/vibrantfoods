@@ -63,14 +63,11 @@ endif;
 		</header>
 
 		<?php
-		foreach ( $productsArr as $product ):
-			// Pulses
-			if ( $product['productTitle'] === "Pulses" ):
+		foreach ( $productsArr as $key => $product ):
+			if ($key % 2 == 0) {
 				echo '<section id="'.$product['productSectionID'].'" class="bg-purple copy-and-image-grid __has-panel">';
 					echo '<div class="copy-and-image-grid__copy __panel">';
-
 						echo '<div class="parallaxBG">'.$product['productTitle'].'</div>';
-
 						echo '<h2>'.$product['productTitle'].'</h2>';
 						echo $product['productCopy'];
 					echo '</div>';
@@ -79,82 +76,20 @@ endif;
 						echo wp_get_attachment_image( $product['productImage'], 'full', false);
 					echo '</div>';
 				echo '</section>';
-			// Spices
-			elseif ( $product['productTitle'] === "Spices" ):
+			} else {
 				echo '<section id="'.$product['productSectionID'].'" class="copy-and-image-grid __image_left bg-white">';
 					echo '<div class="copy-and-image-grid__img __image_left">';
 						echo wp_get_attachment_image( $product['productImage'], 'full', false);
 					echo '</div>';
 
 					echo '<div class="copy-and-image-grid__copy __image_left">';
-						
 						echo '<div class="parallaxBG">'.$product['productTitle'].'</div>';
-
 						echo '<h2>'.$product['productTitle'].'</h2>';
 						echo $product['productCopy'];
 					echo '</div>';
 				echo '</section>';
-			// Flours
-			elseif ( $product['productTitle'] === "Flours" ):
-				echo '<section id="'.$product['productSectionID'].'" class="bg-purple copy-and-image-grid __has-panel">';
-					echo '<div class="copy-and-image-grid__copy __panel">';
+			}
 
-						echo '<div class="parallaxBG">'.$product['productTitle'].'</div>';
-
-						echo '<h2>'.$product['productTitle'].'</h2>';
-						echo $product['productCopy'];
-					echo '</div>';
-
-					echo '<div class="copy-and-image-grid__img __panel">';
-						echo wp_get_attachment_image( $product['productImage'], 'full', false);
-					echo '</div>';
-				echo '</section>';
-			// Nuts
-			elseif ( $product['productTitle'] === "Nuts" ):
-				echo '<section id="'.$product['productSectionID'].'" class="copy-and-image-grid __image_left bg-white">';
-					echo '<div class="copy-and-image-grid__img __image_left">';
-						echo wp_get_attachment_image( $product['productImage'], 'full', false);
-					echo '</div>'; 
-
-					echo '<div class="copy-and-image-grid__copy __image_left">';
-
-						echo '<div class="parallaxBG">'.$product['productTitle'].'</div>';
-
-						echo '<h2>'.$product['productTitle'].'</h2>';
-						echo $product['productCopy'];
-					echo '</div>';
-				echo '</section>';
-			// Snacks
-			elseif ( $product['productTitle'] === "Snacks" ):
-				echo '<section id="'.$product['productSectionID'].'" class="bg-img bg-img-dark copy-and-image-grid __has-panel">';
-					echo '<div class="copy-and-image-grid__copy __panel">';
-
-						echo '<div class="parallaxBG">'.$product['productTitle'].'</div>';
-
-						echo '<h2>'.$product['productTitle'].'</h2>';
-						echo $product['productCopy'];
-					echo '</div>';
-
-					echo '<div class="copy-and-image-grid__img __panel">';
-						echo wp_get_attachment_image( $product['productImage'], 'full', false);
-					echo '</div>';
-				echo '</section>';
-			// Dairy
-			elseif ( $product['productTitle'] === "Dairy" ):
-				echo '<section id="'.$product['productSectionID'].'" class="copy-and-image-grid __image_left bg-white">';
-					echo '<div class="copy-and-image-grid__img __image_left">';
-						echo wp_get_attachment_image( $product['productImage'], 'full', false);
-					echo '</div>';
-
-					echo '<div class="copy-and-image-grid__copy __image_left">';
-
-						echo '<div class="parallaxBG">'.$product['productTitle'].'</div>';
-
-						echo '<h2>'.$product['productTitle'].'</h2>';
-						echo $product['productCopy'];
-					echo '</div>';
-				echo '</section>';
-			endif;
 		endforeach;
 		?>
 

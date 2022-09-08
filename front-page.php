@@ -90,7 +90,9 @@ get_header();
             $vibrantHeading = get_field('vibrant_heading') ?: null;
             $vibrantSub = get_field('vibrant_sub') ?: null;
             $vibrantAccordions = have_rows('vibrant_accordions') ?: null; 
-            $vibrantParallaxBG = str_replace(' ', '<br>', $vibrantHeading );
+            $vibrantParallaxBG = preg_replace('/ /', '<br>', $vibrantHeading, 1);
+    
+
 
             if ( $vibrantHeading && $vibrantSub && $vibrantAccordions ) :
                 ?>

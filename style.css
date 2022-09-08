@@ -425,6 +425,8 @@ big {
 
 .site-header {
 	padding: 25px 0 30px;
+	position: relative;
+	z-index: 1;
 }
 
 .site-header .wrapper {
@@ -434,6 +436,7 @@ big {
 
 body {
 	background: #fff;
+	overflow-x: hidden;
 }
 
 body:has(.rmp_menu_trigger.is-active) {
@@ -1023,7 +1026,7 @@ textarea {
 }
 
 #vibrant-way .parallaxBG {
-	top: 55px;
+	left: -190px;
 }
 
 #vibrant-way-accordions {
