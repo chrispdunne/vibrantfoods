@@ -19,9 +19,13 @@
         align-items: center;
     }
     .brand-logo-link {
-        max-height: 60px;
+        max-width: 115px;
     }
-
+    #trs {
+        .brand-logo-link {
+            max-width: 100px;
+        }
+    }
     @include mobile{
         .brand-logo-links {
             gap: 0;

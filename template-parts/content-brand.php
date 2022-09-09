@@ -27,12 +27,11 @@ endif;
                 if ( $brands && !is_wp_error( $brands ) ) {
                     echo '<div class="brand-logo-links"><a href="">';
                     foreach ( $brands as $brand ) {
-                        echo '<a href="' . get_permalink( $brand->ID ) . '">';
+                        echo '<a id="' . sanitize_title( $brand->post_title ) . '" href="' . get_permalink( $brand->ID ) . '">';
                         echo '<img class="brand-logo-link" src="';
                         echo wp_get_attachment_image_src( get_field( 'brand_logo', $brand->ID ), 'medium' )[0];
                         echo '" />';
                         echo '</a>';
-
                     }
                     echo '</div>';
                 }
