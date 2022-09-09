@@ -10,7 +10,13 @@
         @include tablet{
             margin-bottom:40px;
         }
+        &.single-col{
+            @include tablet{
+                margin-bottom:20px;
+            }
+        }
     }
+
 
     label{
         display:inline-block;
