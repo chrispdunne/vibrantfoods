@@ -47,3 +47,9 @@
 .no-bottom-margin{
     margin-bottom:0;
 }
+
+.fill-grid{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}

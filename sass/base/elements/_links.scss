@@ -45,6 +45,21 @@ a {
 	}
 }
 
+.entry-content a{
+	color:$red;
+	text-decoration:underline;
+
+	&:visited{
+		color:$red;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $purple;
+	}
+}
+
 .link-with-arrow{
 	display:inline-flex;
 	gap:10px;

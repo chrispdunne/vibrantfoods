@@ -22,3 +22,12 @@
         }
     }
 }
+
+.inner-wrapper-grid{
+    display:grid;
+    grid-template-columns:minmax(40px, 1fr) minmax(auto, var(--inner-width)) minmax(40px, 1fr);
+
+    &.__two-col-center{
+        grid-template-columns:minmax(40px, 1fr) minmax(auto, calc(var(--inner-width) / 2)) minmax(auto, calc(var(--inner-width) / 2)) minmax(40px, 1fr);
+    }
+}

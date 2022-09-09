@@ -8,6 +8,8 @@
     --margin-small:30px;
     --margin-large:50px;
     --margin-extra-large: 100px;
+    --margin-max: 100px;
 
     --margin-minus-large:calc(var(--margin-large) * -1);
+    --margin-minus-max:calc(var(--margin-max) * -1);
 }

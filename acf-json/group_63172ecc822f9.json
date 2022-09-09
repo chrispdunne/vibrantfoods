@@ -1,6 +1,6 @@
 {
     "key": "group_63172ecc822f9",
-    "title": "News",
+    "title": "News post fields",
     "fields": [
         {
             "key": "field_63172ecfcb663",
@@ -47,5 +47,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1662652291
+    "modified": 1662719070
 }

@@ -35,21 +35,8 @@ $newsTitle = get_field('news_title') ?: null;
 				<?php
 				the_title( '<h1 class="uppercase">', '</h1>' ); 
 				
-				$signUpTitle = get_field('signup_link_page_link_title') ?: null;
-				$signUpLink = get_field('signup_link_page_link') ?: null;
-
-				$pressPageTitle = get_field('press_link_page_link_title') ?: null;
-				$pressPageLink = get_field('press_link_page_link') ?: null;
-
-				if ( $signUpTitle && $pressPageLink ) 
-					echo '<p>
-							<a class="link-with-arrow purple" href="'.$signUpLink.'">'.$signUpTitle.'<img class="style-svg arrow-purple" src="'.get_template_directory_uri().'/gfx/circled-arrow.svg" /></a>
-						</p>';
-	
-				if ( $pressPageTitle && $pressPageLink ) 
-					echo '<p>
-							<a class="link-with-arrow purple" href="'.$pressPageLink.'">'.$pressPageTitle.'<img class="style-svg arrow-purple" src="'.get_template_directory_uri().'/gfx/circled-arrow.svg" /></a>
-						</p>';
+				get_template_part( 'template-parts/partial', 'sign-up-link' );
+				get_template_part( 'template-parts/partial', 'press-link' );
 				?>
 	
 			</div>
