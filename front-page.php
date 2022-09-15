@@ -39,9 +39,11 @@ get_header();
                     <div class="hero-content">
                         <div class="inner-wrapper content-indent">
                         <div class="img__copy entry-content">
-                            <?php the_title('<h1 class="uppercase">', '</h1>'); ?>
-                            <p class="standfirst"><?= $strap; ?></p>
-                            <a href="#our-purpose"><img class="style-svg arrow-down arrow-black" src="<?= get_template_directory_uri(); ?>/gfx/circled-arrow.svg" /><span class="screen-reader-text">Jump to Our Purposes</span></a>
+                            <div class="hero-content__text">
+                                <?php the_title('<h1 class="uppercase">', '</h1>'); ?>
+                                <p class="standfirst"><?= $strap; ?></p>
+                            </div>
+                            <a class="purpose_link" href="#our-purpose"><img class="style-svg arrow-down arrow-black" src="<?= get_template_directory_uri(); ?>/gfx/circled-arrow.svg" /><span class="screen-reader-text">Jump to Our Purposes</span></a>
                         </div>
                     </div>
                     </div>

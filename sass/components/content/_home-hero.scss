@@ -5,6 +5,8 @@
     .hero-image-container {
         margin-left: 50vw;
         height: calc(100vh - 182px);
+
+      
         img {
             margin-top: 70px;
         }
@@ -15,6 +17,7 @@
     .hero-video-container {
         display: none;
         height: 100vh;
+        min-height: 900px;
         @include tablet {
             display: block;
         }
@@ -36,8 +39,17 @@
 
         .img__copy{
             margin-top: 260px;
+            
             @include tablet{
                 margin-top: 300px;
+              
+            }
+        }
+        .hero-content__text {
+            @include tablet{
+                background-color: rgba(255,255,255,0.7);
+                max-width: 450px;
+                padding: 30px;
             }
         }
     }
@@ -47,15 +59,15 @@
     }
     .standfirst{
         max-width:14ch;
-        margin-bottom:10rem;
-
+        margin-bottom: 1rem;
         @include smallmobile{
             max-width:22ch;
-            margin-bottom:8rem;
+        
         }
-
-        @include tablet{
-            margin-bottom:7rem;
-        }
+    }
+    .purpose_link {
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+        display: block;
     }
 }

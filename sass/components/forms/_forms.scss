@@ -1,3 +1,24 @@
+.gform_body {
+    input, 
+    textarea,
+    select {
+        border-radius: 3px;
+    }
+    .email,
+    .phone {
+        grid-column: span 6 !important;
+    }
+    select {
+        background: $color__background-input;
+    }   
+}
+.gform_footer {
+    .gform_button  {
+        text-transform: uppercase;
+        color: $yellow;
+    }
+}
+
 .form-container{
     padding-left:60px;
     padding-right:60px;

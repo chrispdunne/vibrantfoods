@@ -13,11 +13,20 @@
 			items.each( function( index ) {
 				const el = $( this );
 				const y = window.scrollY + window.innerHeight;
-				const elY = itemYPositions[ index ]; //el.offset().top;
-				const progress = 1 - ( elY / y );
+				const elW = el.width();
+				const elY = itemYPositions[ index ] + ( elW / 2 ); //el.offset().top;
+				// const progress = 1 - ( elY / y );
+				const progress = ( y - elY ) / window.innerHeight;
+
+
+				// const progress = ( y - elY ) / window.innerHeight;
+				if ( index === 0 ) {
+					console.log( { y, elY } );
+					console.log(progress);
+				}
 				if ( progress > 0 ) {
 					if ( y >= elY || elY < window.innerHeight ) {
-						el.css( 'transform', 'rotate(90deg) translateX(' + ( 150 * progress ) + '%)' );
+						el.css( 'transform', 'rotate(90deg) translateX(-' + ( 50 * progress ) + '%)' );
 					}
 				}
 			} );

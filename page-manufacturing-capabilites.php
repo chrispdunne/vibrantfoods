@@ -89,6 +89,7 @@ the_post();
 		$supplierVideoURL = get_field('manufacturing_suppliers_video_url') ?: null;
 		$supplierCopyTwo = get_field('manufacturing_suppliers_copy_two') ?: null;
 		$supplierImgTwo = get_field('manufacturing_suppliers_image_two') ?: null;
+		$supplierRows = get_field('manufacturing_suppliers_additional_rows') ?: null;
 
 		if ( $supplierTitle && $supplierCopyOne && $supplierImgOne) :
 			echo '<section class="manufacturing-suppliers">';
@@ -143,6 +144,29 @@ the_post();
 
 					echo '</div>';
 				endif;
+
+
+				if ( $supplierRows ) { 
+					foreach ( $supplierRows as $supplierRow ) : ?>
+
+ 					<section class="bg-parallax bg-white manufacturing-safety">
+
+						<div class="inner-wrapper entry-content">
+
+							<div class="parallaxContent">
+								<h3 class="purple"><?php echo $supplierRow['title'] ?></h3>
+								<div class="copy-indent">
+									<?php echo $supplierRow['body'] ?>
+								</div>
+							</div>
+						</div>
+
+						<div class="spacer __shallow"></div>
+
+					</section>
+
+					<?php endforeach;
+				}
 			echo '</section>';
 		endif;
 

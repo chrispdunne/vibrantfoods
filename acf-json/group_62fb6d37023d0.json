@@ -710,6 +710,25 @@
             "multiple": 0,
             "return_format": "id",
             "ui": 1
+        },
+        {
+            "key": "field_6321f00adfbeb",
+            "label": "Video",
+            "name": "video",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4"
         }
     ],
     "location": [
@@ -732,5 +751,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1662652339
+    "modified": 1663168532
 }
